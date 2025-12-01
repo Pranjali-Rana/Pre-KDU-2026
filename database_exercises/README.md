@@ -1,6 +1,7 @@
 # StreamFlix Content Management System
 
 ## 📌 Scenario  
+
 Welcome to **StreamFlix**!  
 You're joining as a junior backend engineer, and your first task is to help manage the streaming platform's content database. StreamFlix has different content categories (Movies, Series, Documentaries, Anime) and needs to track which shows belong to which category, along with their ratings and popularity metrics.
 
