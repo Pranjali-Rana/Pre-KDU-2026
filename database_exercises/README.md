@@ -29,10 +29,10 @@ CREATE DATABASE streamflix;
 #### **Categories Table**
 ```sql
 CREATE TABLE category (
-    category_id SERIAL PRIMARY KEY,
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(100) NOT NULL,
     description TEXT
-);
+) ENGINE=InnoDB;
 ```
 <img width="1634" height="818" alt="image" src="https://github.com/user-attachments/assets/32217aaf-f98c-491e-a677-170316ca946c" />
 
@@ -40,14 +40,14 @@ CREATE TABLE category (
 #### **Content Table**
 ```sql
 CREATE TABLE content (
-    content_id SERIAL PRIMARY KEY,
+    content_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
-    rating DECIMAL(3,1) CHECK (rating >= 0 AND rating <= 10),
+    rating DECIMAL(3,1),
     views_in_millions DECIMAL(10,2),
-    release_year INTEGER,
-    category_id INTEGER,
+    release_year INT,
+    category_id INT,
     FOREIGN KEY (category_id) REFERENCES category(category_id)
-);
+) ENGINE=InnoDB;
 ```
 <img width="1679" height="912" alt="image" src="https://github.com/user-attachments/assets/3018cea6-37b7-48b6-9d3a-da51cfe097c1" />
 
